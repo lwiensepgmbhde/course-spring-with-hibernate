@@ -11,6 +11,7 @@ import org.springframework.context.support.GenericApplicationContext;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = ApplicationContextTest.TestConfig.class)
+
 class ApplicationContextTest {
 
     @Autowired
@@ -29,6 +30,7 @@ class ApplicationContextTest {
 
 
     // If you want to use component scan, add it here!
+    @ComponentScan(basePackages = "de.oette.course.A05" )
     @Configuration
     static class TestConfig {
 
